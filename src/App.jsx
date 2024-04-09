@@ -76,7 +76,7 @@ const App = () => {
 
   return (
     <TodoTemplate>
-      <TodoHeader />
+      <TodoHeader todos={todos} />
       <TodoInsert onInsert={onInsert} />
       <TodoList todos={todos} onToggle={onToggle} onRemove={onRemove} />
       <TodoFooter onFinishRemove={onFinishRemove} onAllRemove={onAllRemove} />

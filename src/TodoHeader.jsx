@@ -13,10 +13,14 @@ const TodoHeaderBlock = styled.div`
   }
 `;
 
-const TodoHeader = () => {
+const TodoHeader = ({ todos }) => {
+  const total = todos.length;
+  const complete = todos.filter((todo) => todo.checked).length;
   return (
     <TodoHeaderBlock>
-      <h1>일정관리 앱</h1>
+      <h1>
+        일정관리 앱 {complete}/{total}건 처리
+      </h1>
     </TodoHeaderBlock>
   );
 };
